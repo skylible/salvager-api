@@ -5,22 +5,29 @@ This is a project of cosmetic website. This app is built with Django and functio
 # Environment
 
 Python 3.7.7
+
 Django 3.0.4
 
 # Needed Dependencies
 
 Pillow
+
 djangorestframework
+
 Requests
 
 # What endpoints are available?
 
 For now, there are only 3 endpoints available
+
 GET /api/v1/products : list all products with child models
+
 GET /api/v1/products/:id : get product based on id with its child models
+
 GET /api/v1/product-images : list all product images available on the server
 
 # How to get product image?
 
 Just start with website url followed by the path provided by the api
+
 For example: http://localhost:8000/media/product-images/perfume.png
