@@ -25,7 +25,9 @@ SECRET_KEY = 'u)q1a_zbg$f278d%4wyw2@0qvtfh+#1zrnv1gce@ue3y6nqg9p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", 
+"salvagerapi.salvagerindonesia.com", 
+"www.salvagerapi.salvagerindonesia.com"]
 
 
 # Application definition
@@ -120,7 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+STATICFILES_DIRS = [BASE_DIR+'/assets/']
+STATIC_ROOT = '/home/salvager/salvagerapi.salvagerindonesia.com/static/'
+MEDIA_ROOT = '/home/salvager/salvagerapi.salvagerindonesia.com/media/'
 MEDIA_URL = '/media/'
 
 
