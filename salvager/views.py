@@ -39,3 +39,4 @@ class ListProductImageView(generics.ListAPIView):
     """
     queryset = ProductImage.objects.all()
     serializer_class = ProductImageSerializer
+
