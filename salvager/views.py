@@ -1,14 +1,11 @@
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import status
-from .models import Product, ProductImage
-from .serializers import ProductSerializer, ProductImageSerializer
+from .models import Product, ProductImage, Faq
+from .serializers import ProductSerializer, ProductImageSerializer, FaqSerializer
 
 
 class ListProductView(generics.ListAPIView):
-    """
-    Provides a get method handler.
-    """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -34,9 +31,9 @@ class ProductDetailView(generics.RetrieveDestroyAPIView):
             )
 
 class ListProductImageView(generics.ListAPIView):
-    """
-    Provides a get method handler.
-    """
     queryset = ProductImage.objects.all()
     serializer_class = ProductImageSerializer
 
+class ListFaqView(generics.ListAPIView):
+    queryset = Faq.objects.all()
+    serializer_class = FaqSerializer

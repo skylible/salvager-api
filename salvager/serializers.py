@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, ProductImage, Review
+from .models import Product, ProductImage, Review, Faq
 
 class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,3 +18,8 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = ("headline", "content", "rating", "username", "pub_time")
+
+class FaqSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Faq
+        fields = ("question", "answer")

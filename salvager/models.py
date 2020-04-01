@@ -46,3 +46,10 @@ class Review(models.Model):
 
     def __str__(self):
         return self.headline
+
+class Faq(models.Model):
+    question = models.CharField(max_length=1000)
+    answer = models.CharField(max_length=3000)
+
+    def __str__(self):
+        return self.question
