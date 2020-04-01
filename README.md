@@ -26,6 +26,11 @@ GET /api/v1/products/:id : get product based on id with its child models
 
 GET /api/v1/product-images : list all product images available on the server
 
+GET /api/v1/faqs : list all faqs available on the server
+
+GET /api/v1/diaries : list all diaries available on the server
+
+
 # How to get product image?
 
 Just start with website url followed by the path provided by the api
