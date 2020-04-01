@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, ProductImage, Review, Faq
+from .models import Product, ProductImage, Review, Faq, Diary
 
 class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,3 +23,8 @@ class FaqSerializer(serializers.ModelSerializer):
     class Meta:
         model = Faq
         fields = ("question", "answer")
+
+class DiarySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Diary
+        fields = ("image", "headline", "content", "created_by", "pub_date")

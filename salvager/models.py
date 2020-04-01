@@ -53,3 +53,10 @@ class Faq(models.Model):
 
     def __str__(self):
         return self.question
+
+class Diary(models.Model):
+    image = models.ImageField(upload_to='diary_images')
+    headline = models.TextField(max_length=3000)
+    content = models.TextField(max_length=6000)
+    created_by = models.CharField(max_length=100)
+    pub_time = models.DateTimeField()
