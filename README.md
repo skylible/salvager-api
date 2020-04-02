@@ -16,6 +16,8 @@ djangorestframework
 
 Requests
 
+django-cors-headers
+
 # What endpoints are available?
 
 For now, there are only 3 endpoints available
