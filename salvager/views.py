@@ -43,4 +43,4 @@ class ListFaqView(generics.ListAPIView):
 
 class ListDiaryView(generics.ListAPIView):
     queryset = Diary.objects.all()
-    serializer_class = ProductImageSerializer
+    serializer_class = DiarySerializer
