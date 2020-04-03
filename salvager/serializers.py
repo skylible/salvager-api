@@ -27,4 +27,4 @@ class FaqSerializer(serializers.ModelSerializer):
 class DiarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Diary
-        fields = ("id", "image", "headline", "content", "created_by", "pub_date")
+        fields = ("id", "image", "headline", "content", "created_by", "pub_time")
