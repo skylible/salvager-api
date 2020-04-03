@@ -12,19 +12,19 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         depth = 1
-        fields = ("name", "description", "price", "rating", "product_images", "product_reviews")
+        fields = ("id", "name", "description", "price", "rating", "product_images", "product_reviews")
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ("headline", "content", "rating", "username", "pub_time")
+        fields = ("id", "headline", "content", "rating", "username", "pub_time")
 
 class FaqSerializer(serializers.ModelSerializer):
     class Meta:
         model = Faq
-        fields = ("question", "answer")
+        fields = ("id", "question", "answer")
 
 class DiarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Diary
-        fields = ("image", "headline", "content", "created_by", "pub_date")
+        fields = ("id", "image", "headline", "content", "created_by", "pub_date")
