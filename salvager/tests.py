@@ -3,16 +3,10 @@ import os
 from django.urls import reverse
 from rest_framework.test import APITestCase, APIClient
 from rest_framework.views import status
-from django.core.files import File
 from django.core.files.base import ContentFile
-from django.core.files.temp import NamedTemporaryFile
 from .models import Product
 from .models import ProductImage
 from .serializers import ProductSerializer
-from .serializers import ProductImageSerializer
-
-# Create your tests here.
-
 
 class BaseViewTest(APITestCase):
     client = APIClient()

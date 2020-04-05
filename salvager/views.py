@@ -1,12 +1,12 @@
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import status
-from .models import Product, ProductImage, Faq, Diary
+from .models import Product, ProductImage, Faq, Diary, Instagram
 from .serializers import ProductSerializer
 from .serializers import ProductImageSerializer
 from .serializers import FaqSerializer
 from .serializers import DiarySerializer
-
+from .serializers import InstagramSerializer
 
 class ListProductView(generics.ListAPIView):
     queryset = Product.objects.all()
@@ -44,3 +44,7 @@ class ListFaqView(generics.ListAPIView):
 class ListDiaryView(generics.ListAPIView):
     queryset = Diary.objects.all()
     serializer_class = DiarySerializer
+
+class ListInstagramView(generics.ListAPIView):
+    queryset = Instagram.objects.all()
+    serializer_class = InstagramSerializer

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, ProductImage, Review, Faq, Diary
+from .models import Product, ProductImage, Review, Faq, Diary, Instagram
 
 class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -28,3 +28,8 @@ class DiarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Diary
         fields = ("id", "image", "headline", "content", "created_by", "pub_time")
+
+class InstagramSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Instagram
+        fields = ("id", "image", "post_url", "description")
